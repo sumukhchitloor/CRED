@@ -108,7 +108,7 @@ def main():
         results = parse_cloudtrail_log(str(file_path))
         print_report(results, file_path.name)
     
-    top_100_ips_counts = global_source_ip_counter.most_common(10)
+    top_100_ips_counts = global_source_ip_counter.most_common(100)
     
     ip_reputation(top_100_ips_counts, 'ip_reputation_summary.json')
     
